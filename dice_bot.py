@@ -28,7 +28,7 @@ async def on_roll_message(message: types.Message):
     elif user_data > bot_data:
         await bot.send_message(message.from_user.id, f'Побеждает {message.from_user.username}')
     else:
-        await on_star_message(message)
+        await on_roll_message(message)
 
 
 @dp.message_handler()
