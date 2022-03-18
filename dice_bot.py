@@ -30,7 +30,12 @@ async def on_roll_message(message: types.Message):
     else:
         await on_roll_message(message)
 
-
+        
+@dp.message_handler(commands=['whoami'])
+async def on_whoami_message(message: types.Message):
+    await message.answer_sticker(r'CAACAgIAAxkBAAEEMvRiNIYXOCd7MRyqf8Fy1PkeDsMUcgACfxAAAvlWYEuWGlMqVhX_xyME')
+        
+        
 @dp.message_handler()
 async def on_help_messaage(message: types.Message):
     """Отвечает на любое текстовое сообщение информацией о том, как играть."""
